@@ -1,4 +1,4 @@
-name: CI
+name: Test context
 
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -13,4 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: echo ID/NUMBER/ATTEMPT
-        run: echo echo ${{ github.run_id }}/${{ github.run_number }}/${{ github.run_attempt }}
+        run: echo ${{ github.run_id }}/${{ github.run_number }}/${{ github.run_attempt }}
+      - name: echo github context
+        run: echo ${{ github }}
