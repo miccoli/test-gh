@@ -15,4 +15,4 @@ jobs:
       - name: echo ID/NUMBER/ATTEMPT
         run: echo ${{ github.run_id }}/${{ github.run_number }}/${{ github.run_attempt }}
       - name: echo github context
-        run: echo ${{ github }}
+        run: echo ${{ toJSON(github) }}
